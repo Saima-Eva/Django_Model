@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Information</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #4285f4;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    table {
+      margin: 20px;
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    th, td {
+      padding: 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #4285f4;
+      color: #fff;
+    }
+
+    .footer {
+      background-color: #4285f4;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Student Information</h1>
+  </header>
+
+  <table>
+    <tr>
+      <th>first_name</th>
+      <th>last_name</th>
+      <th>mobile</th>
+      <th>email</th>
+    </tr>
+
+    {% for i in std %}
+    <tr>
+      <td>{{i.first_name}}</td>
+      <td>{{i.last_name}}</td>
+      <td>{{i.mobile}}</td>
+      <td>{{i.email}}</td>
+    </tr>
+    {% endfor %}
+    
+  </table>
+</body>
+</html>
